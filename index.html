@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Popbox.js demo</title>
+	<meta name="description" content="Popbox.js is a tiny javascript plugin for creating stackable modals">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:title" content="Popbox.js"/>
+	<meta property="og:image" content="https://oncebot.github.io/popbox.js/meta.png"/>
+	<meta property="og:site_name" content="popbox.js"/>
+	<meta property="og:description" content="Popbox.js is a tiny javascript plugin for creating stackable modals"/>
+
+
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+	<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+	<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+	<link rel="stylesheet" type="text/css" href="popbox/popbox.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+<div data-popbox-id="modal1" class="popbox">
+	<div class="popbox_container">
+		<p class="heading"><strong>Modal 1</strong></p>
+		<p class="text">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iusto vitae adipisci, fuga exercitationem eum alias sit accusantium nisi. Qui assumenda alias fuga delectus odit soluta reprehenderit aut sint veniam!
+		</p>
+
+		<button data-popbox-close="modal1" class="danger">Close</button>
+		<button data-popbox-target="modal2">Open another</button>
+	</div>
+</div>
+
+
+<div data-popbox-id="modal2" class="popbox">
+	<div class="popbox_container">		
+		<p class="text">
+			<img src="img.jpg">
+		</p>
+		<div class="footer">
+			<button data-popbox-close="modal2" class="danger">Close</button>
+			<button data-popbox-target="modal3">Open another</button>
+		</div>
+	</div>
+</div>
+
+
+<div data-popbox-id="modal3" class="popbox">
+	<div class="popbox_container">
+		<p class="heading"><strong>Login</strong></p>
+			<form autocomplete="off">
+				<div>
+				<input type="email" name="Formemail">
+				</div>
+				<div>
+				<input type="password" name="Formpass">
+				</div>
+			</form>
+		<button data-popbox-close="modal3" class="danger">Close</button>
+		<button data-popbox-target="modal1">Open First</button>
+	</div>
+</div>
+
+<div class="popbox_main_content">
+	<div class="wrapper">
+		<div class="card">
+			<div class="card_title">
+				Popbox.js
+				<div class="small" style="margin-top: 10px;">Popbox.js is a tiny javascript plugin for creating stackable modals</div>
+				<div class="small">It is fully customizable and dependency free.</div>
+				<div><a href="https://github.com/oncebot/popbox.js" target="_blank" class="button getBtn">Get it</a></div>
+			</div>
+			<div class="card_content">
+			<button data-popbox-target="modal1">Open Popbox Modal</button>
+			
+
+
+
+
+
+					<pre><code>
+						<strong>Installation</strong>
+						<br>
+						<br>
+						
+						<ol>
+							<li>Add the popbox.css file to the head of your html.</li>
+							<li>Add the popbox.js file to the head of your html or right before the closing body tag.</li>
+							<li>Add this code after the popbox.js script tag to initialize the plugin.<br>
+									
+							<textarea disabled>
+								<script type="text/javascript">
+									var popbox = &nbsp new Popbox({
+										&nbsp &nbsp	blur:true,
+										&nbsp });
+								</script>
+							</textarea>
+
+
+							</li>
+						</ol>
+					
+					</code></pre>
+
+					<pre><code>
+						<strong>Example html</strong>
+						<br>
+						<br>
+							<textarea disabled style="min-height: 550px;">
+								&nbsp <div data-popbox-id="mypopbox1" class="popbox">
+									&nbsp <div class="popbox_container">
+									&nbsp &nbsp	Popbox content 1
+									&nbsp &nbsp	<button data-popbox-close="mypopbox1">Close</button>
+									&nbsp </div>
+								&nbsp </div>
+
+								&nbsp <div data-popbox-id="mypopbox2" class="popbox">
+									&nbsp <div class="popbox_container">
+									&nbsp &nbsp	Popbox content 2
+									&nbsp </div>
+									&nbsp &nbsp	<button data-popbox-close="mypopbox2">Close</button>
+								&nbsp </div>
+
+								&nbsp <div class="popbox_main_content">
+									&nbsp &nbsp	Main content of the page
+
+									&nbsp &nbsp	<button data-popbox-target="mypopbox1">
+									&nbsp &nbsp	Open mypopbox 1
+									&nbsp &nbsp	</button>
+
+									&nbsp &nbsp	<button data-popbox-target="mypopbox2">
+									&nbsp &nbsp	Open mypopbox 2
+									&nbsp &nbsp	</button>
+								&nbsp </div>
+							</textarea>
+					</code></pre>
+
+					<pre><code>
+						<strong>Options</strong>
+						<br>
+						<br>
+						
+						<ol>
+							<li>blur : set it to true for blur effect on the main content (Default:false)</li>
+							</li>
+						</ol>
+						
+					</code></pre>
+
+					<pre><code>
+						<strong>API</strong>
+						<br>
+						<br>
+
+							Open and close popbox with api
+							<textarea disabled style="min-height: 300px;">
+								<script type="text/javascript">
+									var popbox = &nbsp new Popbox({
+										&nbsp &nbsp	blur:true,
+										&nbsp });
+
+									//open a popbox
+									popbox.open('mypopbox1');	
+									//close a popbox
+									popbox.close('mypopbox1');	
+									//close all popboxes
+									popbox.clear();	
+								</script>
+							</textarea>
+						
+					</code></pre>
+
+
+					<pre><code>
+						<strong>Emitted events</strong>
+						<br>
+						<br>
+
+							<p>'popbox_opening': when a popbox is opening, that popbox element will emit this event.</p>
+							<p>'popbox_opened': when a popbox is opened, that popbox element will emit this event.</p>
+							<p>'popbox_closing': when a popbox is closing, that popbox element will emit this event.</p>
+							<p>'popbox_closed': when a popbox is closed, that popbox element will emit this event.</p>
+						
+					</code></pre>
+
+			</div>
+
+		</div>
+		<div style="text-align: center; font-size: 12px; margin-bottom: 15px;"><a href="https://oncebot.com" target="_blank">oncebot.com</a></div>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="popbox/popbox.js"></script>	
+<script type="text/javascript">
+	var popbox = new Popbox({
+		blur:true,
+	});
+
+</script>	
+</body>
+</html>

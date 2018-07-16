@@ -1,0 +1,136 @@
+.wrapper{
+	max-width: 678px;
+	margin:auto;
+}
+
+pre {
+    border-left: 0.3rem solid #4039ff;
+}
+body{
+	background:#f2f2f2;
+}
+
+.push_left{
+	margin-left: 6px;
+}
+.push_right{
+	margin-right: 6px;
+}
+code,xmp{
+	white-space: normal !important;
+}
+textarea{
+    margin-bottom: 0px;
+    min-height: 200px;
+    line-height: 1;
+}
+
+
+.card{
+	margin:20px;
+    border-radius: 5px;
+    background:#fff;
+	box-shadow:0px 0px 20px rgba(0, 0, 0, 0.1)
+}
+.card_title,.title{
+    background: #4039ff;
+    color: #fff;
+}
+
+.card_title,.title{
+	padding: 15px 20px;
+    font-weight: bold;
+}
+.card_title{
+border-radius: 4px 4px 0px 0px;
+}
+.card_content{
+	padding: 15px;
+}
+
+.small{
+font-size: 14px;
+font-weight: 400;
+}
+
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: #4039ff;
+    border: 0.1rem solid #4039ff;
+}
+a.button.getBtn{
+margin-top: 16px;background-color:#fff;color:#4039ff;border-color: #fff;
+}
+
+
+
+
+
+/*custom style*/
+.popbox .heading{
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+.popbox .text{
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-bottom: 10px;
+}
+.popbox button{
+    padding: 10px 10px 0px 0px;
+    margin: 0px;
+    line-height: 1;
+    height: auto;
+    background: transparent;
+    border-color: transparent;
+    margin-right: 12px;
+    color:#7a7aff;
+}
+.popbox button:last-child{
+margin-right: 0px;
+}
+.popbox .danger{
+    color: #000;
+}
+
+[data-popbox-id="modal1"] .popbox_container{
+    max-width:450px;    
+}
+
+[data-popbox-id="modal2"] .popbox_container{
+    max-width:400px;
+    padding:0px;
+}
+[data-popbox-id="modal2"] .popbox_container .text img{
+    border-radius: 4px 4px 0px 0px;
+}
+[data-popbox-id="modal2"] .popbox_container .text{
+    margin-bottom: 0px;
+    line-height: 0;
+}
+[data-popbox-id="modal2"] .popbox_container .footer{
+    padding:6px 12px 12px 12px;
+}
+[data-popbox-id="modal2"] .popbox_container .heading{
+    padding:12px 12px 0px 12px;
+    margin-bottom: 0px;
+    color: #a9a9a9;
+    font-size: 12px;
+}
+
+[data-popbox-id="modal3"] .popbox_container{
+    max-width:350px;    
+    text-align: center;
+}
+
+input{
+    border-radius: 100px !important;
+    background: #f8f8f8 !important;
+}
+
+form{
+    margin-bottom: 0px !important;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #f8f8f8 inset !important;
+}
