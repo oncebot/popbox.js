@@ -8,7 +8,6 @@ It is fully customizable and dependency free.
 ![Popbox. animated](https://oncebot.github.io/popbox.js/animated.popbox.js.gif)
 
 
-
 ### Installation
 
 1. Add the popbox.css file to the head of your html.
