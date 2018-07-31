@@ -9,27 +9,9 @@ class Popbox{
 				}
 			}
 		}
-		this.transition = 'transitionend',
-		// this.getTransition();
 		this.bindEvents();
 
-	}	
-	getTransition(){
-	    var t;
-	    var el = document.createElement('fakeelement');
-	    var transitions = {
-	      'transition':'transitionend',
-	      'OTransition':'oTransitionEnd',
-	      'MozTransition':'transitionend',
-	      'WebkitTransition':'webkitTransitionEnd'
-	    }
-
-	    for(t in transitions){
-	        if( el.style[t] !== undefined ){
-	            this.transition = transitions[t];
-	        }
-	    }
-	}	
+	}		
 	bindEvents(){
 		var triggers = document.querySelectorAll('[data-popbox-target]');
 		var closers = document.querySelectorAll('[data-popbox-close]');
